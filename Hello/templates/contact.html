@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+{% block title %}Contact{% endblock title %}
+{%block body%}
+
+<div class="container-fluid mb-5">
+      <img src="/static/img/contact-us.jpg" class="d-block w-100" alt="...">
+</div>
+<div class="container py-4">
+<h1 class="text-center bg-secondary text-white"> Contact Us </h1>
+<form method="post" action="/contact">
+{% csrf_token %}
+    <div class="mb-3">
+    <label for="name" > Name</label>
+    <input type="text" class="form-control" id="name" name="name">
+  </div>
+  <div class="mb-3">
+    <label for="exampleInputEmail1" class="form-label">Email address</label>
+    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="email">
+    <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+  </div>
+    <div class="mb-3 py-3">
+    <label for="phone" > Phone</label>
+    <input type="text" class="form-control" id="phone" name="phone">
+  </div>
+    <div>
+
+    </div>
+<div class="mb-3 py-4">
+  <label for="desc" >Description</label>
+  <textarea class="form-control" id="desc" name="desc"></textarea>
+</div>
+  <div class="col-auto">
+    <button type="submit" class="btn btn-primary mb-3">Submit</button>
+  </div>
+</form>
+</div>
+<div class="text-xl-center  my-5">
+    <p><a class="text-xl-center bg-danger" aria-current="page" href="https://www.youtube.com/@LockDownDiariesDIY/about" target="_blank" >Please click to Subscribe our Channel</a></p>
+</div>
+
+{% endblock body%}
